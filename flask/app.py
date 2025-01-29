@@ -1,8 +1,9 @@
-# save this as app.py
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    return "Hello, World! Time marches on"
+@app.route("/about", methods=['GET'])
+def about():
+    version = '0.0.1'
+
+    return {'version': version}, 200
