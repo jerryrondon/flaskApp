@@ -7,4 +7,4 @@ app = Flask(__name__)
 def about():
     version = os.environ.get('APP_VERSION')
 
-    return {'version': version}, 200
+    return {'app_version': version}, 200
