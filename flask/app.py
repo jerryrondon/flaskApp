@@ -14,5 +14,6 @@ def about():
 def secrets():
     creds = dict()
     creds['db_password'] = os.environ.get('DB_PASSWORD')
+    creds['app_token'] = os.environ.get('APP_TOKEN')
 
     return creds, 200
