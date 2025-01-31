@@ -7,8 +7,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 7070:8080
-    env_file:
-      - path: ./flask/dev.env
-        required: true
     environment:
       - APP_VERSION
+      - DB_PASSWORD=${DB_PASSWORD}
